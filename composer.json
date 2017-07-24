@@ -1,0 +1,41 @@
+{
+    "name" 			: "Deftly/BlogPageIntroEditor",
+    "description" 	: "A plugin to add introduction content to the Blog Page using the built-in WordPress editor",
+    "type"          : "project",
+    "keywords" 		: ["wordpress", "wp", "plugin"],
+    "homepage" 		: "https://jeffcleverley.com",
+    "license" 		: "GPL-2.0+",
+    "authors": [
+        {
+            "name" 	: "Jeff Cleverley",
+            "email" : "jeff@jeffcleverley.com"
+        }
+    ],
+    "require": {
+        "php" : ">=5.6.0"
+    },
+    "require-dev": {
+
+    },
+    "autoload" : {
+        "classmap": [],
+        "files": [
+            "src/contents.php",
+            "src/admin/enable-editor.php"
+        ]
+    },
+    "autoload-dev" : {
+        "files": [
+
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "vendor-dir": "assets/vendor"
+    },
+    "minimum-stability": "dev"
+}
