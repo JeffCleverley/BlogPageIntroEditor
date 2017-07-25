@@ -1,6 +1,8 @@
 # Deftly Blog Page Intro Editor Plugin
 
-This plugin allows you to use the built-in WordPress TinyMCE editor on your Blog Page. Use it to enter awesome and interesting introduction content to your Blog Page.
+This plugin allows you to use the built-in WordPress TinyMCE editor on your Blog Page. Use it to enter awesome and interesting introduction content to your Blog Page. 
+
+Built from an awesome KnowTheCode tutorial. https://knowthecode.io training by Tonya Mork.
 
 ## Installation
 
