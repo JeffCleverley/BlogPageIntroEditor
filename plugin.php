@@ -1,6 +1,6 @@
 <?php
 /**
-* Add awesome introduction content to your blog page using the built-in WordPress TinyMCE editor!
+* Add awesome introduction content to your blog page_for_posts using the built-in WordPress TinyMCE editor!
 *
 * @package      BlogPageIntroEditor
 * @since        0.0.1
