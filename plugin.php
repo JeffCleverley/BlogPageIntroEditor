@@ -28,6 +28,4 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit( 'What exactly do you think you\'re doing?' );
 }
 
-define( 'PlUGIN_URL', plugin_dir_url( __FILE__ ) );
-
 require_once( __DIR__ . '/assets/vendor/autoload.php' );

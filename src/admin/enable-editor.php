@@ -11,9 +11,22 @@
 
 namespace BlogPageIntroEditor\EnableEditor;
 
+add_action( 'dbx_post_advanced', __NAMESPACE__ . '\remove_standard_notice' );
+/**
+ *  Remove the standard notice on page_for_posts.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function remove_standard_notice() {
+	 remove_action( 'edit_form_after_title', '_wp_posts_page_notice' );
+}
+
 add_action( 'edit_form_after_title', __NAMESPACE__ . '\enable_editor_for_page_for_posts', 99 );
 /**
 * Enable editor on the page_for_posts page, to allow the user to add content.
+* Add dismissible notice to replace the standard warning notice.
 *
 *  @since   0.0.1
 *
@@ -27,18 +40,10 @@ function enable_editor_for_page_for_posts( $post ) {
     if ( get_option( 'page_for_posts' ) == $post->ID ) {
 
         if ( empty( $post->post_content ) ) {
-            posts_page_notice_editor_introduction();
+
+            include( dirname( __FILE__ ) . '/../views/editor-notice-view.php' );
         }
 
         add_post_type_support( 'page', 'editor' );
     }
-}
-
-function posts_page_notice_editor_introduction() {
-
-    $message = '<div class="notice notice-info is-dismissible inline"><p>';
-    $message .= __( 'Add some content, using the editor below, to introduce your users to your awesome blog page and it\'s incredible content!' );
-    $message .='</p></div>';
-
-    echo $message;
 }
